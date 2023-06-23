@@ -1,0 +1,77 @@
+syntax="proto3";
+
+import "google/protobuf/timestamp.proto";
+package usermanagement;
+
+service oculusUserManagement {
+
+  rpc register (registraionRequest) returns (registraionResponce) {}
+
+  rpc getUser (userInfoRequest) returns (userInfoResponce) {}
+
+  //Change after getting account setttings details
+  rpc accountSettings (settingsRequest) returns (settingsResponce) {}
+
+  rpc notifications (notificationRequest) returns (notificationResponce) {}
+
+}
+
+
+message registraionRequest {
+  string registrationId=1;
+  google.protobuf.Timestamp registrationtimestamp = 3;
+  google.protobuf.Timestamp lastUpdationtimestamp = 4;
+  Facebook faceBook=5;
+  LinkedIn linkedIn=6;
+  Twitter twitter=7;
+  Instagram instagram=8;
+
+}
+
+
+message registraionResponce {
+  string responceId = 1;
+}
+
+
+message userInfoRequest{
+  string userId=1;
+}
+
+message userInfoResponce{
+  string userData=1;
+}
+
+message notificationRequest{
+
+}
+
+message notificationResponce{
+
+}
+
+message settingsRequest{
+
+}
+
+message settingsResponce{
+
+}
+
+message Facebook{
+ string access_token=1;
+ string appId=2;
+}
+
+message LinkedIn{
+
+}
+
+message Twitter{
+
+}
+
+message Instagram{
+ string accessToken=1;
+ string appId=2;
+}
