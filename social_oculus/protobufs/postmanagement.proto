@@ -1,0 +1,58 @@
+syntax="proto3";
+
+import "google/protobuf/timestamp.proto";
+//import  "oculusConnectors.proto";
+package protobufs.socialhubconnectors;
+
+service socialPostManagement{
+  rpc getAllPost(getAllPostRequest) returns (getAllPostResponse){}
+  rpc getPost(getAllPostRequest) returns (getAllPostResponse){}
+  rpc createPost(postRequest)returns (postResponse){}
+  rpc updatePost(postRequest)returns (postResponse){}
+  rpc deletePost(postRequest)returns (postResponse){}
+  rpc commentOnPost(postRequest)returns (postResponse){}
+  rpc postSchedule(postRequest)returns (postResponse){}
+  rpc draftPost(postRequest)returns (postResponse){}
+  rpc customizeContentPost(postRequest)returns (postResponse){}
+  rpc bulkPost(postRequest)returns (postResponse){}
+
+}
+
+message getAllPostResponse {
+  string mediaSource=1;
+  string pageId=2;
+  string postList=3;
+  string postResponceId=5;
+  string registrationId=4;
+}
+
+message getAllPostRequest {
+  string mediaSource=1;
+  string pageId=2;
+  string accessToken=3;
+  string registrationId=4;
+}
+
+message postRequest{
+string registrationId=4;
+string pageId=1;
+string accessToken=2;
+string mediaSource=5;
+string Object=6;
+}
+
+message postResponse{
+string postId=1;
+}
+
+message postScheduleRequest{
+    string pageId=1;
+    string accessToken=2;
+    string postData=3;
+    string registrationId=4;
+    string mediaSource=5;
+    string schedule_time=6;
+}
+
+
+

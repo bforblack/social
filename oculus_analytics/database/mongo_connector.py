@@ -13,6 +13,9 @@ class Mongo:
         return self._client.get_collection(collectionName).insert_one(document).inserted_id
 
 
+    def find_data(self, collectionName, document):
+        return self._client.get_collection(collectionName).find_one(document)
+
 
 
 

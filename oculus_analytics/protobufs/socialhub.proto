@@ -1,0 +1,55 @@
+syntax="proto3";
+
+import "google/protobuf/timestamp.proto";
+//import  "oculusConnectors.proto";
+package protobufs.socialhubconnectors;
+
+service socialHubConnectors{
+  rpc getUserData(socialHubRequest) returns (socialHubResponce){}
+  rpc postUserData(socialHubRequest)returns (socialHubResponce){}
+
+}
+
+
+message socialHubResponce {
+string responce=1;
+}
+
+
+message socialHubRequest {
+  FaceBook faceBook=1;
+ Instagram instagram=2;
+ Twitter twitter=3;
+ LinkedIn linkedIn=4;
+ string registrationId=5;
+
+}
+
+message FaceBook{
+  string appId=1;
+  string accessToken=2;
+  string Object=3;
+}
+
+message Instagram{
+  string appId=1;
+  string accessToken=2;
+  string Object=3;
+
+}
+message Twitter{
+  string appId=1;
+  string accessToken=2;
+  string Object=3;
+
+}
+message LinkedIn{
+  string appId=1;
+  string accessToken=2;
+  string Object=3;
+
+}
+
+
+
+

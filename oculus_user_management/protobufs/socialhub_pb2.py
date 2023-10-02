@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0fsocialhub.proto\x12\x1dprotobufs.socialhubconnectors\x1a\x1fgoogle/protobuf/timestamp.proto\"\xff\x01\n\x11socialHubResponce\x12\x39\n\x08\x66\x61\x63\x65\x42ook\x18\x01 \x01(\x0b\x32\'.protobufs.socialhubconnectors.FaceBook\x12;\n\tinstagram\x18\x02 \x01(\x0b\x32(.protobufs.socialhubconnectors.Instagram\x12\x37\n\x07twitter\x18\x03 \x01(\x0b\x32&.protobufs.socialhubconnectors.Twitter\x12\x39\n\x08linkedIn\x18\x04 \x01(\x0b\x32\'.protobufs.socialhubconnectors.LinkedIn\"\xfe\x01\n\x10socialHubRequest\x12\x39\n\x08\x66\x61\x63\x65\x42ook\x18\x01 \x01(\x0b\x32\'.protobufs.socialhubconnectors.FaceBook\x12;\n\tinstagram\x18\x02 \x01(\x0b\x32(.protobufs.socialhubconnectors.Instagram\x12\x37\n\x07twitter\x18\x03 \x01(\x0b\x32&.protobufs.socialhubconnectors.Twitter\x12\x39\n\x08linkedIn\x18\x04 \x01(\x0b\x32\'.protobufs.socialhubconnectors.LinkedIn\">\n\x08\x46\x61\x63\x65\x42ook\x12\r\n\x05\x61ppId\x18\x01 \x01(\t\x12\x13\n\x0b\x61\x63\x63\x65ssToken\x18\x02 \x01(\t\x12\x0e\n\x06Object\x18\x03 \x01(\t\"?\n\tInstagram\x12\r\n\x05\x61ppId\x18\x01 \x01(\t\x12\x13\n\x0b\x61\x63\x63\x65ssToken\x18\x02 \x01(\t\x12\x0e\n\x06Object\x18\x03 \x01(\t\"=\n\x07Twitter\x12\r\n\x05\x61ppId\x18\x01 \x01(\t\x12\x13\n\x0b\x61\x63\x63\x65ssToken\x18\x02 \x01(\t\x12\x0e\n\x06Object\x18\x03 \x01(\t\">\n\x08LinkedIn\x12\r\n\x05\x61ppId\x18\x01 \x01(\t\x12\x13\n\x0b\x61\x63\x63\x65ssToken\x18\x02 \x01(\t\x12\x0e\n\x06Object\x18\x03 \x01(\t2\xfe\x01\n\x13socialHubConnectors\x12r\n\x0bgetUserData\x12/.protobufs.socialhubconnectors.socialHubRequest\x1a\x30.protobufs.socialhubconnectors.socialHubResponce\"\x00\x12s\n\x0cpostUserData\x12/.protobufs.socialhubconnectors.socialHubRequest\x1a\x30.protobufs.socialhubconnectors.socialHubResponce\"\x00\x62\x06proto3'
+  serialized_pb=b'\n\x0fsocialhub.proto\x12\x1dprotobufs.socialhubconnectors\x1a\x1fgoogle/protobuf/timestamp.proto\"%\n\x11socialHubResponce\x12\x10\n\x08responce\x18\x01 \x01(\t\"\x96\x02\n\x10socialHubRequest\x12\x39\n\x08\x66\x61\x63\x65\x42ook\x18\x01 \x01(\x0b\x32\'.protobufs.socialhubconnectors.FaceBook\x12;\n\tinstagram\x18\x02 \x01(\x0b\x32(.protobufs.socialhubconnectors.Instagram\x12\x37\n\x07twitter\x18\x03 \x01(\x0b\x32&.protobufs.socialhubconnectors.Twitter\x12\x39\n\x08linkedIn\x18\x04 \x01(\x0b\x32\'.protobufs.socialhubconnectors.LinkedIn\x12\x16\n\x0eregistrationId\x18\x05 \x01(\t\">\n\x08\x46\x61\x63\x65\x42ook\x12\r\n\x05\x61ppId\x18\x01 \x01(\t\x12\x13\n\x0b\x61\x63\x63\x65ssToken\x18\x02 \x01(\t\x12\x0e\n\x06Object\x18\x03 \x01(\t\"?\n\tInstagram\x12\r\n\x05\x61ppId\x18\x01 \x01(\t\x12\x13\n\x0b\x61\x63\x63\x65ssToken\x18\x02 \x01(\t\x12\x0e\n\x06Object\x18\x03 \x01(\t\"\x84\x01\n\x07Twitter\x12\x13\n\x0b\x62\x65\x61rerToken\x18\x01 \x01(\t\x12\x0e\n\x06\x61piKey\x18\x02 \x01(\t\x12\x14\n\x0c\x61piKeySecret\x18\x03 \x01(\t\x12\x13\n\x0b\x61\x63\x63\x65ssToken\x18\x04 \x01(\t\x12\x19\n\x11\x61\x63\x63\x65ssTokenSecret\x18\x05 \x01(\t\x12\x0e\n\x06Object\x18\x06 \x01(\t\">\n\x08LinkedIn\x12\r\n\x05\x61ppId\x18\x01 \x01(\t\x12\x13\n\x0b\x61\x63\x63\x65ssToken\x18\x02 \x01(\t\x12\x0e\n\x06Object\x18\x03 \x01(\t2\xfe\x01\n\x13socialHubConnectors\x12r\n\x0bgetUserData\x12/.protobufs.socialhubconnectors.socialHubRequest\x1a\x30.protobufs.socialhubconnectors.socialHubResponce\"\x00\x12s\n\x0cpostUserData\x12/.protobufs.socialhubconnectors.socialHubRequest\x1a\x30.protobufs.socialhubconnectors.socialHubResponce\"\x00\x62\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -36,30 +36,9 @@ _SOCIALHUBRESPONCE = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='faceBook', full_name='protobufs.socialhubconnectors.socialHubResponce.faceBook', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='instagram', full_name='protobufs.socialhubconnectors.socialHubResponce.instagram', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='twitter', full_name='protobufs.socialhubconnectors.socialHubResponce.twitter', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='linkedIn', full_name='protobufs.socialhubconnectors.socialHubResponce.linkedIn', index=3,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='responce', full_name='protobufs.socialhubconnectors.socialHubResponce.responce', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -75,8 +54,8 @@ _SOCIALHUBRESPONCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=84,
-  serialized_end=339,
+  serialized_start=83,
+  serialized_end=120,
 )
 
 
@@ -116,6 +95,13 @@ _SOCIALHUBREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='registrationId', full_name='protobufs.socialhubconnectors.socialHubRequest.registrationId', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -128,8 +114,8 @@ _SOCIALHUBREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=342,
-  serialized_end=596,
+  serialized_start=123,
+  serialized_end=401,
 )
 
 
@@ -174,8 +160,8 @@ _FACEBOOK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=598,
-  serialized_end=660,
+  serialized_start=403,
+  serialized_end=465,
 )
 
 
@@ -220,8 +206,8 @@ _INSTAGRAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=662,
-  serialized_end=725,
+  serialized_start=467,
+  serialized_end=530,
 )
 
 
@@ -234,22 +220,43 @@ _TWITTER = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='appId', full_name='protobufs.socialhubconnectors.Twitter.appId', index=0,
+      name='bearerToken', full_name='protobufs.socialhubconnectors.Twitter.bearerToken', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='accessToken', full_name='protobufs.socialhubconnectors.Twitter.accessToken', index=1,
+      name='apiKey', full_name='protobufs.socialhubconnectors.Twitter.apiKey', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='Object', full_name='protobufs.socialhubconnectors.Twitter.Object', index=2,
+      name='apiKeySecret', full_name='protobufs.socialhubconnectors.Twitter.apiKeySecret', index=2,
       number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='accessToken', full_name='protobufs.socialhubconnectors.Twitter.accessToken', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='accessTokenSecret', full_name='protobufs.socialhubconnectors.Twitter.accessTokenSecret', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='Object', full_name='protobufs.socialhubconnectors.Twitter.Object', index=5,
+      number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -266,8 +273,8 @@ _TWITTER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=727,
-  serialized_end=788,
+  serialized_start=533,
+  serialized_end=665,
 )
 
 
@@ -312,14 +319,10 @@ _LINKEDIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=790,
-  serialized_end=852,
+  serialized_start=667,
+  serialized_end=729,
 )
 
-_SOCIALHUBRESPONCE.fields_by_name['faceBook'].message_type = _FACEBOOK
-_SOCIALHUBRESPONCE.fields_by_name['instagram'].message_type = _INSTAGRAM
-_SOCIALHUBRESPONCE.fields_by_name['twitter'].message_type = _TWITTER
-_SOCIALHUBRESPONCE.fields_by_name['linkedIn'].message_type = _LINKEDIN
 _SOCIALHUBREQUEST.fields_by_name['faceBook'].message_type = _FACEBOOK
 _SOCIALHUBREQUEST.fields_by_name['instagram'].message_type = _INSTAGRAM
 _SOCIALHUBREQUEST.fields_by_name['twitter'].message_type = _TWITTER
@@ -383,8 +386,8 @@ _SOCIALHUBCONNECTORS = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=855,
-  serialized_end=1109,
+  serialized_start=732,
+  serialized_end=986,
   methods=[
   _descriptor.MethodDescriptor(
     name='getUserData',

@@ -1,33 +1,56 @@
+import json
+
 from pydantic import BaseModel
-from typing import Any,Optional
+from typing import Any, Optional
 from pyfacebook import GraphAPI
 
+from logs.studio_logger import Logger
+logger = Logger("socialHubIntegrationService")
+
+
 class Facebook_graph_api(BaseModel):
-    access_token:Any
-    app_id:Any
-    Object:Optional[Any]
-
-
-
+    access_token: Optional[str]
+    app_id: Optional[str]
+    Object: Optional[str]
 
     def getUserData(self):
-        return GraphAPI(access_token=self.access_token).\
-            get_object(object_id=self.app_id,fields=object)
+        try:
 
+            response = GraphAPI(access_token=self.access_token).get_object(object_id=self.app_id,
+                                                                           fields=self.Object)
+            logger.info("Received successful response from get_user_data call to Facebook GraphAPI...")
+            return response
+
+        except Exception as e:
+            error = f"An Exception occurred while making get_user_data call to Facebook GraphAPI: {e}"
+            logger.info(error)
+            return {"error": str(e)}
 
     def postUserData(self):
-        return GraphAPI(access_token=self.access_token). \
-            post_object(object_id=self.app_id, fields=object)
+        try:
+            self.Object = json.loads(self.Object)
+            response = GraphAPI(access_token=self.access_token).post_object(object_id=self.app_id,
+                                                                            connection=self.Object['connection'],
+                                                                            params={'message': self.Object['message']})
+            logger.info("Received successful response from post_data call to Facebook GraphAPI...")
+            return response
+
+        except Exception as e:
+            error = f"An Exception occurred while making post_data call to Facebook GraphAPI: {e}"
+            logger.info(error)
+            return {"error": str(e)}
 
     def deleteUserData(self):
-        return GraphAPI(access_token=self.access_token). \
-            delete_object(object_id=self.app_id, fields=object)
+        try:
+            return GraphAPI(access_token=self.access_token). \
+                delete_object(object_id=self.app_id, fields=self.Object)
 
+        except Exception as e:
+            error = f"An Exception occurred while making delete_post call to Facebook GraphAPI: {e}"
+            logger.info(error)
+            return {"error": str(e)}
 
-
-
-
-    #Todo:Do something for fields
+    # Todo:Do something for fields
 
     # def __get_user_fields(self):
     #     return "id,name,accounts" \

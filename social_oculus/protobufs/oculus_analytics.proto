@@ -1,0 +1,35 @@
+syntax="proto3";
+
+import "google/protobuf/timestamp.proto";
+//import  "oculusConnectors.proto";
+package oculus_analytics;
+service oculusAnalytics {
+//Choosing default paramameter for all methods, chnage accordingly
+  rpc postAnalytics(userPostRequest) returns (userResponce) {}
+
+  rpc userAnalytics(userPostRequest) returns (userResponce) {}
+
+  //Change after getting a
+  // ccount setttings details
+  rpc trendAnalytics (userPostRequest) returns (userResponce) {}
+
+  rpc socialNetworkAnalytics(userPostRequest) returns (userResponce) {}
+
+  rpc audienceSegmentation(userPostRequest) returns (userResponce) {}
+
+
+
+}
+
+message userPostRequest {
+  string id = 1;
+  string pageId=2;
+  string registrationId=3;
+}
+
+message userResponce{
+  string processedReportData=1;
+  string processedReportId=2;
+
+}
+

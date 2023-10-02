@@ -21,9 +21,9 @@ service oculusAnalytics {
 }
 
 message userPostRequest {
-  string userId = 1;
-  string socialMediaId=2;
-  mediaSource mediaSource=3;
+  string id = 1;
+  string pageId=2;
+  string registrationId=3;
 }
 
 message userResponce{
@@ -32,12 +32,3 @@ message userResponce{
 
 }
 
-
-enum mediaSource{
-  Facebook=0;
-  Instagram=1;
-  Twitter=2;
-  LinkedIn=3;
-  All=4;
-
-}

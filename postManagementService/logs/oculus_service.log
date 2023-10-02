@@ -1,0 +1,544 @@
+2023-09-07 10:21:12,047 - INFO - scheduler.py:37 - Task has been scheduled at 16:45 with the Jobid: 64de0129a6f33d65b18d6954
+2023-09-07 10:21:12,076 - INFO - scheduler.py:37 - Task has been scheduled at 16:48 with the Jobid: 64de01da5726f1e8d74435bc
+2023-09-07 10:21:12,094 - INFO - scheduler.py:37 - Task has been scheduled at 16:51 with the Jobid: 64de0279cc019e6edcca6122
+2023-09-07 10:21:12,107 - INFO - scheduler.py:37 - Task has been scheduled at 16:54 with the Jobid: 64de0331f46d17c2ca5909aa
+2023-09-07 10:21:12,125 - INFO - scheduler.py:37 - Task has been scheduled at 18:54 with the Jobid: 64de1f5537f63db84a566eff
+2023-09-07 10:21:12,143 - INFO - scheduler.py:37 - Task has been scheduled at 18:55 with the Jobid: 64de1fb437f63db84a566f01
+2023-09-07 10:21:12,176 - INFO - scheduler.py:37 - Task has been scheduled at 18:57 with the Jobid: 64de2021c5e8a35576c07108
+2023-09-07 10:21:12,195 - INFO - scheduler.py:37 - Task has been scheduled at 19:01 with the Jobid: 64de20ef5e5fc1a4522e5887
+2023-09-07 10:21:12,207 - INFO - scheduler.py:37 - Task has been scheduled at 19:02 with the Jobid: 64de21275e5fc1a4522e5891
+2023-09-07 10:37:26,310 - INFO - server.py:51 - Request for create_post() user_id: OCULUS3395982711 media_source: faceBook received...
+2023-09-07 10:37:26,405 - INFO - post_service.py:25 - Calling function: create_post
+2023-09-07 10:37:26,485 - INFO - post_service.py:79 - Request for create_post() for user (user_id: OCULUS3395982711) received...
+2023-09-07 10:37:26,605 - INFO - post_service.py:25 - Calling function: __prepare_data_for_create_post
+2023-09-07 10:37:26,627 - INFO - post_service.py:190 - Preparing data for create_post()...
+2023-09-07 10:37:26,649 - INFO - facebook_pojo.py:25 - data prepared for create post
+2023-09-07 10:37:26,701 - INFO - post_service.py:212 - Data for create_post() prepared...
+2023-09-07 10:37:26,733 - INFO - post_service.py:28 - Function __prepare_data_for_create_post executed in 0.211153 seconds
+2023-09-07 10:37:26,765 - INFO - hub_Integration.py:24 - Sending request to socialhub grpc server to post_user_data()...
+2023-09-07 10:37:26,889 - ERROR - hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063246.868033389","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063246.868021865","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/socialhub/oculusconnectorsapi/hub_Integration.py", line 27, in postUserData
+    response = socialhub_pb2_grpc.socialHubConnectorsStub(channel).postUserData(socialhub_pb2.socialHubRequest(**json.loads(request)))
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 826, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 729, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063246.868033389","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063246.868021865","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+2023-09-07 10:37:27,093 - ERROR - post_service.py:87 - hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063246.868033389","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063246.868021865","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/socialhub/oculusconnectorsapi/hub_Integration.py", line 27, in postUserData
+    response = socialhub_pb2_grpc.socialHubConnectorsStub(channel).postUserData(socialhub_pb2.socialHubRequest(**json.loads(request)))
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 826, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 729, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063246.868033389","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063246.868021865","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 80, in create_post
+    hub_data = hub_Integration.postUserData(self.__prepare_data_for_create_post(data))
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/socialhub/oculusconnectorsapi/hub_Integration.py", line 31, in postUserData
+    logger.error(str(e))
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/logs/studio_logger.py", line 52, in error
+    raise Exception(self.location(logging_string))
+Exception: hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063246.868033389","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063246.868021865","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+2023-09-07 10:37:27,229 - ERROR - server.py:62 - Error occurred while creating post for user_id: OCULUS3395982711  media_source: faceBook: post_service.py:87 - hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063246.868033389","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063246.868021865","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/socialhub/oculusconnectorsapi/hub_Integration.py", line 27, in postUserData
+    response = socialhub_pb2_grpc.socialHubConnectorsStub(channel).postUserData(socialhub_pb2.socialHubRequest(**json.loads(request)))
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 826, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 729, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063246.868033389","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063246.868021865","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 80, in create_post
+    hub_data = hub_Integration.postUserData(self.__prepare_data_for_create_post(data))
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/socialhub/oculusconnectorsapi/hub_Integration.py", line 31, in postUserData
+    logger.error(str(e))
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/logs/studio_logger.py", line 52, in error
+    raise Exception(self.location(logging_string))
+Exception: hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063246.868033389","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063246.868021865","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/server.py", line 54, in createPost
+    data = PostManagementService().create_post(requested_data)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 26, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 87, in create_post
+    if scheduled:
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/logs/studio_logger.py", line 52, in error
+    raise Exception(self.location(logging_string))
+Exception: post_service.py:87 - hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063246.868033389","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063246.868021865","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+2023-09-07 10:37:27,272 - ERROR - Exception calling application: server.py:62 - Error occurred while creating post for user_id: OCULUS3395982711  media_source: faceBook: post_service.py:87 - hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063246.868033389","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063246.868021865","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/socialhub/oculusconnectorsapi/hub_Integration.py", line 27, in postUserData
+    response = socialhub_pb2_grpc.socialHubConnectorsStub(channel).postUserData(socialhub_pb2.socialHubRequest(**json.loads(request)))
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 826, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 729, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063246.868033389","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063246.868021865","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 80, in create_post
+    hub_data = hub_Integration.postUserData(self.__prepare_data_for_create_post(data))
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/socialhub/oculusconnectorsapi/hub_Integration.py", line 31, in postUserData
+    logger.error(str(e))
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/logs/studio_logger.py", line 52, in error
+    raise Exception(self.location(logging_string))
+Exception: hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063246.868033389","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063246.868021865","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/server.py", line 54, in createPost
+    data = PostManagementService().create_post(requested_data)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 26, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 87, in create_post
+    if scheduled:
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/logs/studio_logger.py", line 52, in error
+    raise Exception(self.location(logging_string))
+Exception: post_service.py:87 - hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063246.868033389","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063246.868021865","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_server.py", line 435, in _call_behavior
+    response_or_iterator = behavior(argument, context)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/server.py", line 62, in createPost
+    logger.error(error_message)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/logs/studio_logger.py", line 52, in error
+    raise Exception(self.location(logging_string))
+Exception: server.py:62 - Error occurred while creating post for user_id: OCULUS3395982711  media_source: faceBook: post_service.py:87 - hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063246.868033389","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063246.868021865","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+2023-09-07 10:39:14,551 - INFO - server.py:51 - Request for create_post() user_id: OCULUS3395982711 media_source: faceBook received...
+2023-09-07 10:39:14,612 - INFO - post_service.py:25 - Calling function: create_post
+2023-09-07 10:39:14,671 - INFO - post_service.py:79 - Request for create_post() for user (user_id: OCULUS3395982711) received...
+2023-09-07 10:39:14,705 - INFO - post_service.py:25 - Calling function: __prepare_data_for_create_post
+2023-09-07 10:39:14,846 - INFO - post_service.py:190 - Preparing data for create_post()...
+2023-09-07 10:39:14,973 - INFO - facebook_pojo.py:25 - data prepared for create post
+2023-09-07 10:39:15,157 - INFO - post_service.py:212 - Data for create_post() prepared...
+2023-09-07 10:39:15,233 - INFO - post_service.py:28 - Function __prepare_data_for_create_post executed in 0.486167 seconds
+2023-09-07 10:39:15,386 - INFO - hub_Integration.py:24 - Sending request to socialhub grpc server to post_user_data()...
+2023-09-07 10:39:15,505 - ERROR - hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063355.400730240","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063355.400724443","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/socialhub/oculusconnectorsapi/hub_Integration.py", line 27, in postUserData
+    response = socialhub_pb2_grpc.socialHubConnectorsStub(channel).postUserData(socialhub_pb2.socialHubRequest(**json.loads(request)))
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 826, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 729, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063355.400730240","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063355.400724443","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+2023-09-07 10:39:15,734 - ERROR - post_service.py:87 - hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063355.400730240","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063355.400724443","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/socialhub/oculusconnectorsapi/hub_Integration.py", line 27, in postUserData
+    response = socialhub_pb2_grpc.socialHubConnectorsStub(channel).postUserData(socialhub_pb2.socialHubRequest(**json.loads(request)))
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 826, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 729, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063355.400730240","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063355.400724443","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 80, in create_post
+    hub_data = hub_Integration.postUserData(self.__prepare_data_for_create_post(data))
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/socialhub/oculusconnectorsapi/hub_Integration.py", line 31, in postUserData
+    logger.error(str(e))
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/logs/studio_logger.py", line 52, in error
+    raise Exception(self.location(logging_string))
+Exception: hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063355.400730240","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063355.400724443","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+2023-09-07 10:39:16,150 - ERROR - server.py:62 - Error occurred while creating post for user_id: OCULUS3395982711  media_source: faceBook: post_service.py:87 - hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063355.400730240","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063355.400724443","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/socialhub/oculusconnectorsapi/hub_Integration.py", line 27, in postUserData
+    response = socialhub_pb2_grpc.socialHubConnectorsStub(channel).postUserData(socialhub_pb2.socialHubRequest(**json.loads(request)))
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 826, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 729, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063355.400730240","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063355.400724443","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 80, in create_post
+    hub_data = hub_Integration.postUserData(self.__prepare_data_for_create_post(data))
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/socialhub/oculusconnectorsapi/hub_Integration.py", line 31, in postUserData
+    logger.error(str(e))
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/logs/studio_logger.py", line 52, in error
+    raise Exception(self.location(logging_string))
+Exception: hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063355.400730240","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063355.400724443","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/server.py", line 54, in createPost
+    data = PostManagementService().create_post(requested_data)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 26, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 87, in create_post
+    if scheduled:
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/logs/studio_logger.py", line 52, in error
+    raise Exception(self.location(logging_string))
+Exception: post_service.py:87 - hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063355.400730240","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063355.400724443","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+2023-09-07 10:39:16,376 - ERROR - Exception calling application: server.py:62 - Error occurred while creating post for user_id: OCULUS3395982711  media_source: faceBook: post_service.py:87 - hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063355.400730240","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063355.400724443","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/socialhub/oculusconnectorsapi/hub_Integration.py", line 27, in postUserData
+    response = socialhub_pb2_grpc.socialHubConnectorsStub(channel).postUserData(socialhub_pb2.socialHubRequest(**json.loads(request)))
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 826, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 729, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063355.400730240","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063355.400724443","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 80, in create_post
+    hub_data = hub_Integration.postUserData(self.__prepare_data_for_create_post(data))
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/socialhub/oculusconnectorsapi/hub_Integration.py", line 31, in postUserData
+    logger.error(str(e))
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/logs/studio_logger.py", line 52, in error
+    raise Exception(self.location(logging_string))
+Exception: hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063355.400730240","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063355.400724443","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/server.py", line 54, in createPost
+    data = PostManagementService().create_post(requested_data)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 26, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 87, in create_post
+    if scheduled:
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/logs/studio_logger.py", line 52, in error
+    raise Exception(self.location(logging_string))
+Exception: post_service.py:87 - hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063355.400730240","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063355.400724443","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_server.py", line 435, in _call_behavior
+    response_or_iterator = behavior(argument, context)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/server.py", line 62, in createPost
+    logger.error(error_message)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/logs/studio_logger.py", line 52, in error
+    raise Exception(self.location(logging_string))
+Exception: server.py:62 - Error occurred while creating post for user_id: OCULUS3395982711  media_source: faceBook: post_service.py:87 - hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063355.400730240","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063355.400724443","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+2023-09-07 10:40:01,031 - INFO - server.py:51 - Request for create_post() user_id: OCULUS3395982711 media_source: faceBook received...
+2023-09-07 10:40:03,470 - INFO - post_service.py:25 - Calling function: create_post
+2023-09-07 10:40:03,663 - INFO - post_service.py:79 - Request for create_post() for user (user_id: OCULUS3395982711) received...
+2023-09-07 10:40:03,784 - INFO - post_service.py:25 - Calling function: __prepare_data_for_create_post
+2023-09-07 10:40:03,817 - INFO - post_service.py:190 - Preparing data for create_post()...
+2023-09-07 10:40:03,850 - INFO - facebook_pojo.py:25 - data prepared for create post
+2023-09-07 10:40:04,090 - INFO - post_service.py:212 - Data for create_post() prepared...
+2023-09-07 10:40:04,218 - INFO - post_service.py:28 - Function __prepare_data_for_create_post executed in 0.427612 seconds
+2023-09-07 10:40:04,318 - INFO - hub_Integration.py:24 - Sending request to socialhub grpc server to post_user_data()...
+2023-09-07 10:40:04,382 - ERROR - hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063404.334710668","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063404.334702566","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/socialhub/oculusconnectorsapi/hub_Integration.py", line 27, in postUserData
+    response = socialhub_pb2_grpc.socialHubConnectorsStub(channel).postUserData(socialhub_pb2.socialHubRequest(**json.loads(request)))
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 826, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 729, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063404.334710668","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063404.334702566","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+2023-09-07 10:40:04,633 - ERROR - post_service.py:87 - hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063404.334710668","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063404.334702566","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/socialhub/oculusconnectorsapi/hub_Integration.py", line 27, in postUserData
+    response = socialhub_pb2_grpc.socialHubConnectorsStub(channel).postUserData(socialhub_pb2.socialHubRequest(**json.loads(request)))
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 826, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_channel.py", line 729, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063404.334710668","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063404.334702566","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 80, in create_post
+    hub_data = hub_Integration.postUserData(self.__prepare_data_for_create_post(data))
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/socialhub/oculusconnectorsapi/hub_Integration.py", line 31, in postUserData
+    logger.error(str(e))
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/logs/studio_logger.py", line 52, in error
+    raise Exception(self.location(logging_string))
+Exception: hub_Integration.py:31 - <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1694063404.334710668","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3948,"referenced_errors":[{"created":"@1694063404.334702566","description":"failed to connect to all addresses","file":"src/core/ext/filters/client_channel/lb_policy/pick_first/pick_first.cc","file_line":394,"grpc_status":14}]}"
+>
+2023-09-07 10:42:55,994 - INFO - scheduler.py:37 - Task has been scheduled at 16:45 with the Jobid: 64de0129a6f33d65b18d6954
+2023-09-07 10:42:56,005 - INFO - scheduler.py:37 - Task has been scheduled at 16:48 with the Jobid: 64de01da5726f1e8d74435bc
+2023-09-07 10:42:56,022 - INFO - scheduler.py:37 - Task has been scheduled at 16:51 with the Jobid: 64de0279cc019e6edcca6122
+2023-09-07 10:42:56,034 - INFO - scheduler.py:37 - Task has been scheduled at 16:54 with the Jobid: 64de0331f46d17c2ca5909aa
+2023-09-07 10:42:56,041 - INFO - scheduler.py:37 - Task has been scheduled at 18:54 with the Jobid: 64de1f5537f63db84a566eff
+2023-09-07 10:42:56,057 - INFO - scheduler.py:37 - Task has been scheduled at 18:55 with the Jobid: 64de1fb437f63db84a566f01
+2023-09-07 10:42:56,074 - INFO - scheduler.py:37 - Task has been scheduled at 18:57 with the Jobid: 64de2021c5e8a35576c07108
+2023-09-07 10:42:56,096 - INFO - scheduler.py:37 - Task has been scheduled at 19:01 with the Jobid: 64de20ef5e5fc1a4522e5887
+2023-09-07 10:42:56,109 - INFO - scheduler.py:37 - Task has been scheduled at 19:02 with the Jobid: 64de21275e5fc1a4522e5891
+2023-09-07 10:43:09,262 - INFO - server.py:51 - Request for create_post() user_id: OCULUS3395982711 media_source: faceBook received...
+2023-09-07 10:43:09,278 - INFO - post_service.py:25 - Calling function: create_post
+2023-09-07 10:43:09,310 - ERROR - server.py:62 - Error occurred while creating post for user_id: OCULUS3395982711  media_source: faceBook: create_post() missing 1 required positional argument: 'scheduled'
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/server.py", line 54, in createPost
+    data = PostManagementService().create_post(requested_data)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 26, in wrapper
+    result = func(*args, **kwargs)
+TypeError: create_post() missing 1 required positional argument: 'scheduled'
+2023-09-07 10:43:09,347 - ERROR - Exception calling application: server.py:62 - Error occurred while creating post for user_id: OCULUS3395982711  media_source: faceBook: create_post() missing 1 required positional argument: 'scheduled'
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/server.py", line 54, in createPost
+    data = PostManagementService().create_post(requested_data)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 26, in wrapper
+    result = func(*args, **kwargs)
+TypeError: create_post() missing 1 required positional argument: 'scheduled'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_server.py", line 435, in _call_behavior
+    response_or_iterator = behavior(argument, context)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/server.py", line 62, in createPost
+    logger.error(error_message)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/logs/studio_logger.py", line 52, in error
+    raise Exception(self.location(logging_string))
+Exception: server.py:62 - Error occurred while creating post for user_id: OCULUS3395982711  media_source: faceBook: create_post() missing 1 required positional argument: 'scheduled'
+2023-09-07 10:44:06,566 - INFO - scheduler.py:37 - Task has been scheduled at 16:45 with the Jobid: 64de0129a6f33d65b18d6954
+2023-09-07 10:44:06,705 - INFO - scheduler.py:37 - Task has been scheduled at 16:48 with the Jobid: 64de01da5726f1e8d74435bc
+2023-09-07 10:44:06,847 - INFO - scheduler.py:37 - Task has been scheduled at 16:51 with the Jobid: 64de0279cc019e6edcca6122
+2023-09-07 10:44:06,990 - INFO - scheduler.py:37 - Task has been scheduled at 16:54 with the Jobid: 64de0331f46d17c2ca5909aa
+2023-09-07 10:44:07,128 - INFO - scheduler.py:37 - Task has been scheduled at 18:54 with the Jobid: 64de1f5537f63db84a566eff
+2023-09-07 10:44:07,271 - INFO - scheduler.py:37 - Task has been scheduled at 18:55 with the Jobid: 64de1fb437f63db84a566f01
+2023-09-07 10:44:07,376 - INFO - scheduler.py:37 - Task has been scheduled at 18:57 with the Jobid: 64de2021c5e8a35576c07108
+2023-09-07 10:44:07,463 - INFO - scheduler.py:37 - Task has been scheduled at 19:01 with the Jobid: 64de20ef5e5fc1a4522e5887
+2023-09-07 10:44:07,490 - INFO - scheduler.py:37 - Task has been scheduled at 19:02 with the Jobid: 64de21275e5fc1a4522e5891
+2023-09-07 10:44:20,388 - INFO - server.py:51 - Request for create_post() user_id: OCULUS3395982711 media_source: faceBook received...
+2023-09-07 10:44:20,599 - INFO - post_service.py:25 - Calling function: create_post
+2023-09-07 10:44:20,774 - INFO - post_service.py:78 - Request for create_post() for user (user_id: OCULUS3395982711) received...
+2023-09-07 10:44:20,812 - INFO - post_service.py:25 - Calling function: __prepare_data_for_create_post
+2023-09-07 10:44:20,835 - INFO - post_service.py:188 - Preparing data for create_post()...
+2023-09-07 10:44:21,108 - INFO - facebook_pojo.py:25 - data prepared for create post
+2023-09-07 10:44:21,209 - INFO - post_service.py:210 - Data for create_post() prepared...
+2023-09-07 10:44:21,216 - INFO - post_service.py:28 - Function __prepare_data_for_create_post executed in 0.435177 seconds
+2023-09-07 10:44:21,248 - INFO - hub_Integration.py:24 - Sending request to socialhub grpc server to post_user_data()...
+2023-09-07 10:44:23,667 - INFO - hub_Integration.py:28 - Received response from socialhub grpc server for post_user_data()...
+2023-09-07 10:44:23,795 - INFO - post_service.py:25 - Calling function: __save_data
+2023-09-07 10:44:24,103 - INFO - post_service.py:47 - Data has been saved with id True
+2023-09-07 10:44:24,314 - INFO - post_service.py:28 - Function __save_data executed in 0.441186 seconds
+2023-09-07 10:44:24,500 - INFO - post_service.py:28 - Function create_post executed in 3.915987 seconds
+2023-09-07 11:24:39,374 - INFO - server.py:51 - Request for create_post() user_id: OCULUS3395982711 media_source: faceBook received...
+2023-09-07 11:24:39,559 - INFO - post_service.py:25 - Calling function: create_post
+2023-09-07 11:24:39,749 - INFO - post_service.py:78 - Request for create_post() for user (user_id: OCULUS3395982711) received...
+2023-09-07 11:24:39,849 - INFO - post_service.py:25 - Calling function: __prepare_data_for_create_post
+2023-09-07 11:24:39,944 - INFO - post_service.py:188 - Preparing data for create_post()...
+2023-09-07 11:24:40,212 - INFO - facebook_pojo.py:25 - data prepared for create post
+2023-09-07 11:24:40,408 - INFO - post_service.py:210 - Data for create_post() prepared...
+2023-09-07 11:24:40,467 - INFO - post_service.py:28 - Function __prepare_data_for_create_post executed in 0.664334 seconds
+2023-09-07 11:24:40,578 - INFO - hub_Integration.py:24 - Sending request to socialhub grpc server to post_user_data()...
+2023-09-07 11:24:44,252 - INFO - hub_Integration.py:28 - Received response from socialhub grpc server for post_user_data()...
+2023-09-07 11:24:44,421 - INFO - post_service.py:25 - Calling function: __save_data
+2023-09-07 11:24:44,694 - INFO - post_service.py:47 - Data has been saved with id True
+2023-09-07 11:24:44,715 - INFO - post_service.py:28 - Function __save_data executed in 0.438722 seconds
+2023-09-07 11:24:44,742 - INFO - post_service.py:28 - Function create_post executed in 5.335688 seconds
+2023-09-07 11:25:59,146 - INFO - scheduler.py:37 - Task has been scheduled at 16:45 with the Jobid: 64de0129a6f33d65b18d6954
+2023-09-07 11:25:59,261 - INFO - scheduler.py:37 - Task has been scheduled at 16:48 with the Jobid: 64de01da5726f1e8d74435bc
+2023-09-07 11:25:59,371 - INFO - scheduler.py:37 - Task has been scheduled at 16:51 with the Jobid: 64de0279cc019e6edcca6122
+2023-09-07 11:25:59,394 - INFO - scheduler.py:37 - Task has been scheduled at 16:54 with the Jobid: 64de0331f46d17c2ca5909aa
+2023-09-07 11:25:59,401 - INFO - scheduler.py:37 - Task has been scheduled at 18:54 with the Jobid: 64de1f5537f63db84a566eff
+2023-09-07 11:25:59,521 - INFO - scheduler.py:37 - Task has been scheduled at 18:55 with the Jobid: 64de1fb437f63db84a566f01
+2023-09-07 11:25:59,631 - INFO - scheduler.py:37 - Task has been scheduled at 18:57 with the Jobid: 64de2021c5e8a35576c07108
+2023-09-07 11:25:59,768 - INFO - scheduler.py:37 - Task has been scheduled at 19:01 with the Jobid: 64de20ef5e5fc1a4522e5887
+2023-09-07 11:25:59,832 - INFO - scheduler.py:37 - Task has been scheduled at 19:02 with the Jobid: 64de21275e5fc1a4522e5891
+2023-09-07 11:26:06,601 - INFO - post_service.py:25 - Calling function: create_post
+2023-09-07 11:46:07,630 - ERROR - post_service.py:96 - 'scheduledTime'
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 74, in create_post
+    if not data['scheduledTime'] :
+KeyError: 'scheduledTime'
+2023-09-07 11:46:07,856 - ERROR - server.py:60 - Error occurred while creating post for user_id: OCULUS3395982711  media_source: faceBook: post_service.py:96 - 'scheduledTime'
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 74, in create_post
+    if not data['scheduledTime'] :
+KeyError: 'scheduledTime'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/server.py", line 52, in createPost
+    data = PostManagementService().create_post(requested_data)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 26, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 96, in create_post
+    logger.error(str(e))
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/logs/studio_logger.py", line 52, in error
+    raise Exception(self.location(logging_string))
+Exception: post_service.py:96 - 'scheduledTime'
+2023-09-07 11:46:08,029 - ERROR - Exception calling application: server.py:60 - Error occurred while creating post for user_id: OCULUS3395982711  media_source: faceBook: post_service.py:96 - 'scheduledTime'
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 74, in create_post
+    if not data['scheduledTime'] :
+KeyError: 'scheduledTime'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/server.py", line 52, in createPost
+    data = PostManagementService().create_post(requested_data)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 26, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/postmanagementservice/post_service.py", line 96, in create_post
+    logger.error(str(e))
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/logs/studio_logger.py", line 52, in error
+    raise Exception(self.location(logging_string))
+Exception: post_service.py:96 - 'scheduledTime'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shivankurtripathi/anaconda3/envs/psotmanagement/lib/python3.8/site-packages/grpc/_server.py", line 435, in _call_behavior
+    response_or_iterator = behavior(argument, context)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/server.py", line 60, in createPost
+    logger.error(error_message)
+  File "/home/shivankurtripathi/Desktop/workspace/DataNext/src/python/social/postManagementService/logs/studio_logger.py", line 52, in error
+    raise Exception(self.location(logging_string))
+Exception: server.py:60 - Error occurred while creating post for user_id: OCULUS3395982711  media_source: faceBook: post_service.py:96 - 'scheduledTime'

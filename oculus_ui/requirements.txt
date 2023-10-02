@@ -1,0 +1,12 @@
+pymongo==4.1.1
+pickle5==0.0.11
+streamlit==1.22.0
+scikit-learn==1.2.2
+numpy==1.24.3
+pandas==1.5.1
+altair<5
+requests==2.27.1
+Pillow==9.4.0
+pybase64==1.2.3
+minio==7.1.13
+python-dotenv==0.21.1

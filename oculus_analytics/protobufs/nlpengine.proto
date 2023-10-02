@@ -1,0 +1,19 @@
+syntax="proto3";
+
+package nlpengine;
+
+service NLPEngine {
+    rpc Summary (RequestMessage) returns (ResponseMessage);
+    rpc TextAnalytics (RequestMessage) returns (ResponseMessage);
+    rpc Sentiment (RequestMessage) returns (ResponseMessage);
+    rpc getProfanity (RequestMessage) returns (ResponseMessage);
+}
+message RequestMessage {
+    string text = 1;
+}
+
+message ResponseMessage {
+    bool isSuccess = 1;
+    string errorMessage = 2;
+    string response = 3;
+}

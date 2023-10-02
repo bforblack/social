@@ -4,6 +4,7 @@ import "google/protobuf/timestamp.proto";
 //import  "oculusConnectors.proto";
 package protobufs.socialhubconnectors;
 
+
 service socialHubConnectors{
   rpc getUserData(socialHubRequest) returns (socialHubResponce){}
   rpc postUserData(socialHubRequest)returns (socialHubResponce){}
@@ -12,14 +13,8 @@ service socialHubConnectors{
 
 
 message socialHubResponce {
-  FaceBook faceBook=1;
- Instagram instagram=2;
- Twitter twitter=3;
- LinkedIn linkedIn=4;
-  string id=5;
-
+string responce=1;
 }
-
 
 
 message socialHubRequest {
@@ -27,7 +22,7 @@ message socialHubRequest {
  Instagram instagram=2;
  Twitter twitter=3;
  LinkedIn linkedIn=4;
- string id=5;
+ string registrationId=5;
 
 }
 
@@ -44,11 +39,14 @@ message Instagram{
 
 }
 message Twitter{
-  string appId=1;
-  string accessToken=2;
-  string Object=3;
-
+    string bearerToken=1;
+    string apiKey=2;
+    string apiKeySecret=3;
+    string accessToken=4;
+    string accessTokenSecret=5;
+    string Object=6;
 }
+
 message LinkedIn{
   string appId=1;
   string accessToken=2;
